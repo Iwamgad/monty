@@ -48,7 +48,7 @@ typedef struct instruction_s
  * Description: data that can be used everywhere in the program
  */
 
-typedef struct variablePack
+struct variablePack
 {
         char *n;
 	char *file;
