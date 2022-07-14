@@ -29,14 +29,14 @@ void fileError(void)
 /**
  * opcodeError- handles errors when the file
  *              contains an invalid instruction
- * @stack: a pointer to the pointer of the head node
+ * @stack: a pointer to the pointer of the stack_s struct
  * @line_number: line number where the error occured
  * Return: returns nothing
  */
 
 void opcodeError(stack_t **stack, unsigned int line_number)
 {
-	fprintf(stderr, "L%d: unknown instruction %s\n",
+	fprintf(stderr, "L<%d>: unknown instruction %s\n",
 		line_number, sharedPack.opcode);
 	freeStack(stack);
 	exit(EXIT_FAILURE);
@@ -44,7 +44,7 @@ void opcodeError(stack_t **stack, unsigned int line_number)
 
 /**
  * mallocError - handles errors when it's not possible to malloc anymore
- * @void: doesn't take any argument
+ * @stack: a pointer to the pointer of the stack_s struct
  * Return: returns nothing
  */
 

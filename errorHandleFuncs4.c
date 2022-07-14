@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pcharError - handles errors when the value is not in the ascii table
+ * pcharValError - handles errors when the value is not in the ascii table
  * @stack: a pointer to the pointer of the stack_s struct
  * @line_number: line number where the error occured
  * Return: returns nothing
