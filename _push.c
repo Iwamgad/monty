@@ -10,25 +10,23 @@
 
 void _push(stack_t **head, unsigned int line_number)
 {
-    stack_t *newNode = NULL, *tail = NULL;
-    size_t index = 0;
+	stack_t *newNode = NULL, *tail = NULL;
+	size_t i = 0;
 
-    if (!head || !line_number)
-	    exit(EXIT_FAILURE);
-	if (sharedPack.n[index] == '\0')
-        pushError(head, line_number);
+	if (!head || !line_number)
+		exit(EXIT_FAILURE);
+	if (sharedPack.n[i] == '\0')
+		pushError(head, line_number);
 	newNode = malloc(sizeof(stack_t));
 	if (!newNode)
 		mallocError(head);
-	while (sharedPack.n[index] != '\0')
+	while (sharedPack.n[i] != '\0')
 	{
-		if (isdigit(sharedPack.n[index]) == 0 &&
-		    sharedPack.n[index] != '-')
+		if (isdigit(sharedPack.n[i]) == 0 && sharedPack.n[i] != '-')
 			pushError(head, line_number);
-		index++;
+		i++;
 	}
 	newNode->n = atoi(sharedPack.n);
-
 	if (sharedPack.queue_mode == 1)
 	{
 		newNode->next = NULL;

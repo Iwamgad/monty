@@ -38,7 +38,7 @@ void opcodeError(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L%d: unknown instruction %s\n",
 		line_number, sharedPack.opcode);
-	free_stack(stack);
+	freeStack(stack);
 	exit(EXIT_FAILURE);
 }
 
@@ -51,6 +51,6 @@ void opcodeError(stack_t **stack, unsigned int line_number)
 void mallocError(stack_t **stack)
 {
 	fprintf(stderr, "Error: malloc failed \n");
-	free_stack(stack);
+	freeStack(stack);
 	exit(EXIT_FAILURE);
 }

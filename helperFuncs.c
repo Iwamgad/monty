@@ -11,7 +11,7 @@ void freeStack(stack_t **stack)
 	stack_t *node = NULL;
 
 	if (!stack || !*stack)
-        return;
+		return;
 	while (*stack)
 	{
 		node = *stack;

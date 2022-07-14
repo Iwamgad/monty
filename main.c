@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 	stack_t *stack = NULL;
 
 	if (argc != 2 || !argv[1])
-		usage_error();
+		usageError();
 	sharedPack.queue_mode = 0; /* switch off queue mode (stack mode) */
 	sharedPack.file = argv[1];
 	filePtr = fopen(sharedPack.file, "r");
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 		memset(valBuffer, '\0', sizeof(valBuffer));
 	}
 	free(line);
-	free_stack(&stack);
+	freeStack(&stack);
 	fclose(filePtr);
 	return (0);
 }

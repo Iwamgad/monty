@@ -11,7 +11,7 @@
 void pushError(stack_t **stack, unsigned int line_number)
 {
 	 fprintf(stderr, "L<%d>: usage: push integer\n", line_number);
-	 free_stack(stack);
+	 freeStack(stack);
 	 exit(EXIT_FAILURE);
 }
 
@@ -27,7 +27,7 @@ void pushError(stack_t **stack, unsigned int line_number)
 void pintError(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L<%d>: can't pint, stack empty\n", line_number);
-	free_stack(stack);
+	freeStack(stack);
 	exit(EXIT_FAILURE);
 }
 
@@ -41,7 +41,7 @@ void pintError(stack_t **stack, unsigned int line_number)
 void popError(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L<%d>: can't pop an empty stack\n", line_number);
-	free_stack(stack);
+	freeStack(stack);
 	exit(EXIT_FAILURE);
 }
 
@@ -55,7 +55,7 @@ void popError(stack_t **stack, unsigned int line_number)
 void swapError(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L<%d>: can't swap, stack to short\n", line_number);
-	free_stack(stack);
+	freeStack(stack);
 	exit(EXIT_FAILURE);
 }
 
@@ -69,6 +69,6 @@ void swapError(stack_t **stack, unsigned int line_number)
 void addError(stack_t **stack, unsigned int line_number)
 {
 	fprintf(stderr, "L<%d>: can't add, stack too short \n", line_number);
-	free_stack(stack);
+	freeStack(stack);
 	exit(EXIT_FAILURE);
 }
