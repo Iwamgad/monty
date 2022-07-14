@@ -64,6 +64,11 @@ void _pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **head, unsigned int line_number);
+void _div(stack_t **head, unsigned int line_number);
+void _mul(stack_t **head, unsigned int line_number);
+void _mod(stack_t **head, unsigned int line_number);
+void _pchar(stack_t **head, unsigned int line_number);
 
 /* Helping functions */
 void freeStack(stack_t **stack);
@@ -81,5 +86,12 @@ void pintError(stack_t **stack, unsigned int line_number);
 void popError(stack_t **stack, unsigned int line_number);
 void swapError(stack_t **stack, unsigned int line_number);
 void addError(stack_t **stack, unsigned int line_number);
+void subError(stack_t **stack, unsigned int line_number);
+void divError(stack_t **stack, unsigned int line_number);
+void zeroError(stack_t **stack, unsigned int line_number);
+void mulError(stack_t **stack, unsigned int line_number);
+void modError(stack_t **stack, unsigned int line_number);
+void pcharValError(stack_t **stack, unsigned int line_number);
+void pcharEmptyError(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
